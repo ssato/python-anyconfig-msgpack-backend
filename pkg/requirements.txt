@@ -1,2 +1,2 @@
 anyconfig
-msgpack-python
+msgpack

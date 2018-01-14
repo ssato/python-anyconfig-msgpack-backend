@@ -1,5 +1,5 @@
 anyconfig
-msgpack-python
+msgpack
 coveralls
 # flake8  # disabled until 'pkg_resources.VersionConflict' error.
 nose
