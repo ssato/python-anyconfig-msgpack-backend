@@ -7,7 +7,7 @@
 r"""MessagePack backend:
 
 - Format to support: MessagePack, http://msgpack.org
-- Requirements: msgpack-python, https://pypi.python.org/pypi/msgpack-python
+- Requirements: msgpack-python, https://pypi.python.org/pypi/msgpack/
 - Development Status :: 4 - Beta
 - Limitations: None obvious
 - Special options:
@@ -15,7 +15,7 @@ r"""MessagePack backend:
   - All options of msgpack.load{s,} and msgpack.dump{s,} except object_hook
     and file_like should work.
 
-  - See also: http://pythonhosted.org/msgpack-python/api.html
+  - See also: https://pypi.python.org/pypi/msgpack/
 
 Changelog:
 
