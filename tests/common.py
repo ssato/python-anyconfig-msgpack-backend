@@ -24,24 +24,23 @@ def _bytes(astr):
     return bytes(astr, 'utf-8') if anyconfig.compat.IS_PYTHON_3 else astr
 
 
-OrderedDict = dict
-CNF_0 = OrderedDict(((_bytes("DEFAULT"),
-                      OrderedDict(((_bytes("a"), _bytes("0")),
-                                   (_bytes("b"), _bytes("bbb")),
-                                   (_bytes("c"), _bytes("5"))))),
-                     (_bytes("sect0"),
-                      OrderedDict(((_bytes("a"), _bytes("0")),
-                                   (_bytes("b"), _bytes("bbb")),
-                                   (_bytes("c"), _bytes("5")),
-                                   (_bytes("d"), _bytes("x,y,z")))))))
+OrderedDict = anyconfig.compat.OrderedDict
+CNF_0 = dict(((_bytes("DEFAULT"),
+               dict(((_bytes("a"), _bytes("0")),
+                     (_bytes("b"), _bytes("bbb")),
+                     (_bytes("c"), _bytes("5"))))),
+              (_bytes("sect0"),
+               dict(((_bytes("a"), _bytes("0")),
+                     (_bytes("b"), _bytes("bbb")),
+                     (_bytes("c"), _bytes("5")),
+                     (_bytes("d"), _bytes("x,y,z")))))))
 CNF_1 = copy.deepcopy(CNF_0)
 CNF_1[_bytes("sect0")][_bytes("d")] = _bytes("x,y,z").split()
 
-CNF_2 = OrderedDict(((_bytes("a"), 0.1),
-                     (_bytes("b"), _bytes("bbb")),
-                     (_bytes("sect0"),
-                     OrderedDict(((_bytes("c"),
-                                   [_bytes("x"), _bytes("y"),
+CNF_2 = dict(((_bytes("a"), 0.1),
+              (_bytes("b"), _bytes("bbb")),
+              (_bytes("sect0"),
+               dict(((_bytes("c"), [_bytes("x"), _bytes("y"),
                                     _bytes("z")]), )))))
 
 
