@@ -8,7 +8,6 @@ from __future__ import absolute_import
 
 # import copy
 import anyconfig.backend.msgpack as TT
-import anyconfig.compat
 import tests.common as TBC
 
 
