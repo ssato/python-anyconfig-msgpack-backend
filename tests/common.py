@@ -14,17 +14,7 @@ from os import linesep as lsep
 
 import anyconfig.compat
 
-from anyconfig.compat import OrderedDict
 from anyconfig.utils import is_dict_like
-
-
-CNF_0 = OrderedDict((("DEFAULT", OrderedDict((("a", "0"), ("b", "bbb"),
-                                              ("c", "5")))),
-                     ("sect0", OrderedDict((("a", "0"), ("b", "bbb"),
-                                            ("c", "5"),
-                                            ("d", "x,y,z"))))))
-CNF_1 = copy.deepcopy(CNF_0)
-CNF_1["sect0"]["d"] = CNF_1["sect0"]["d"].split()
 
 
 def _bytes(astr):
@@ -34,9 +24,25 @@ def _bytes(astr):
     return bytes(astr, 'utf-8') if anyconfig.compat.IS_PYTHON_3 else astr
 
 
-CNF_2 = OrderedDict((("a", 0.1), ("b", _bytes("bbb")),
-                     ("sect0", OrderedDict((("c", [_bytes("x"), _bytes("y"),
-                                                   _bytes("z")]), )))))
+OrderedDict = dict
+CNF_0 = OrderedDict(((_bytes("DEFAULT"),
+                      OrderedDict(((_bytes("a"), _bytes("0")),
+                                   (_bytes("b"), _bytes("bbb")),
+                                   (_bytes("c"), _bytes("5"))))),
+                     (_bytes("sect0"),
+                      OrderedDict(((_bytes("a"), _bytes("0")),
+                                   (_bytes("b"), _bytes("bbb")),
+                                   (_bytes("c"), _bytes("5")),
+                                   (_bytes("d"), _bytes("x,y,z")))))))
+CNF_1 = copy.deepcopy(CNF_0)
+CNF_1[_bytes("sect0")][_bytes("d")] = _bytes("x,y,z").split()
+
+CNF_2 = OrderedDict(((_bytes("a"), 0.1),
+                     (_bytes("b"), _bytes("bbb")),
+                     (_bytes("sect0"),
+                     OrderedDict(((_bytes("c"),
+                                   [_bytes("x"), _bytes("y"),
+                                    _bytes("z")]), )))))
 
 
 def selfdir():
