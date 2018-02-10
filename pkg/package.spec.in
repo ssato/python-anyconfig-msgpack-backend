@@ -5,7 +5,7 @@
 This is a backend module for python-anyconfig to load and dump MessagePack\
 data.\
 \
-python-anyconfig is a python library to provide common APIs to load dump\
+python-anyconfig is a python library to provide common APIs to load and dump\
 various configuration files like INI, JSON and YAML.
 
 %if 0%{?fedora} || 0%{?rhel} > 7
