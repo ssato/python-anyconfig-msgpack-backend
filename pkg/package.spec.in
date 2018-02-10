@@ -14,8 +14,7 @@ Release:        1%{?dist}
 Summary:        Backend module for python-anyconfig to load and dump MessagePack data
 Group:          Development/Libraries
 License:        MIT
-URL:            https://github.com/ssato/%{name}
-#Source0:        https://github.com/ssato/%{name}/tarball/master/%{name}-%{version}.tar.gz
+URL:            https://github.com/ssato/python-anyconfig-msgpack-backend
 Source0:        %{pkgname}-%{version}.tar.gz
 BuildArch:      noarch
 
