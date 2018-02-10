@@ -8,6 +8,12 @@ data.\
 python-anyconfig is a python library to provide common APIs to load dump\
 various configuration files like INI, JSON and YAML.
 
+%if 0%{?fedora} || 0%{?rhel} > 7
+%bcond_without python3
+%else
+%bcond_with python3
+%endif
+
 Name:           python-%{pkgname}
 Version:        @VERSION@
 Release:        1%{?dist}
@@ -17,12 +23,6 @@ License:        MIT
 URL:            https://github.com/ssato/python-anyconfig-msgpack-backend
 Source0:        %{pkgname}-%{version}.tar.gz
 BuildArch:      noarch
-
-%if 0%{?fedora} || 0%{?rhel} > 7
-%bcond_without python3
-%else
-%bcond_with python3
-%endif
 
 %if 0%{?rhel} == 7
 BuildRequires:  python-devel
