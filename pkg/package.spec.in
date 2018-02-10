@@ -1,6 +1,5 @@
 %global bename msgpack
 %global pkgname anyconfig-%{bename}-backend
-%global debug_package %{nil}
 
 %global sumtxt Backend module for python-anyconfig to load and dump MessagePack data
 %global desctxt \
