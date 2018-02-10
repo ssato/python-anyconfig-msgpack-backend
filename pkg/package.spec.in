@@ -1,7 +1,6 @@
 %global bename msgpack
 %global pkgname anyconfig-%{bename}-backend
 
-%global sumtxt Backend module for python-anyconfig to load and dump MessagePack data
 %global desctxt \
 This is a backend module for python-anyconfig to load and dump MessagePack\
 data.\
@@ -12,7 +11,7 @@ various configuration files like INI, JSON and YAML.
 Name:           python-%{pkgname}
 Version:        @VERSION@
 Release:        1%{?dist}
-Summary:        %{sumtxt}
+Summary:        Backend module for python-anyconfig to load and dump MessagePack data
 Group:          Development/Libraries
 License:        MIT
 URL:            https://github.com/ssato/%{name}
@@ -41,7 +40,7 @@ BuildRequires:  python3-setuptools
 %description %{desctxt}
 
 %package     -n python2-%{pkgname}
-Summary:        %{sumtxt}
+Summary:        %{summary}
 Requires:       python2-anyconfig
 Requires:       python2-msgpack
 %{?python_provide:%python_provide python2-%{pkgname}}
@@ -50,7 +49,7 @@ Requires:       python2-msgpack
 
 %if %{with python3}
 %package     -n python3-%{pkgname}
-Summary:        %{sumtxt}
+Summary:        %{summary}
 Requires:       python3-anyconfig
 Requires:       python3-msgpack
 %{?python_provide:%python_provide python3-%{pkgname}}
