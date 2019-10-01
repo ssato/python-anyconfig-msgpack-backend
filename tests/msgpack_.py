@@ -6,8 +6,10 @@
 # pylint: disable=missing-docstring,invalid-name,too-few-public-methods
 from __future__ import absolute_import
 
+import msgpack
+
 # import copy
-import anyconfig.backend.msgpack as TT
+import anyconfig_msgpack_backend as TT
 import tests.common as TBC
 
 
@@ -15,7 +17,7 @@ class HasParserTrait(TBC.HasParserTrait):
 
     psr = TT.Parser()
     cnf = TBC.CNF_2
-    cnf_s = TT.msgpack.packb(cnf)
+    cnf_s = msgpack.packb(cnf)
 
 
 class Test_10(TBC.Test_10_dumps_and_loads, HasParserTrait):
