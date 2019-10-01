@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2018 - 2019 Satoru SATOH <satoru.satoh @ gmail.com>
 # Copyright (C) 2015 - 2018 Satoru SATOH <ssato @ redhat.com>
 # Copyright (C) 2017 Red Hat, Inc.
 # License: MIT
