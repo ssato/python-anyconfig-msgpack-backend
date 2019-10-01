@@ -86,5 +86,8 @@ Requires:       python3-msgpack
 %endif
 
 %changelog
+* Tue Oct  1 2019 Satoru SATOH <satoru.satoh@gmail.com> - 0.1.0-1
+- new upstream release
+
 * Sat Feb 10 2018 Satoru SATOH <ssato@redhat.com> - 0.0.1-1
 - Initial packaging
