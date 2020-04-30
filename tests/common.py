@@ -17,31 +17,23 @@ import anyconfig.compat
 from anyconfig.utils import is_dict_like
 
 
-def _bytes(astr):
-    """
-    Convert a string to bytes. Do nothing in python 2.6.
-    """
-    return bytes(astr, 'utf-8') if anyconfig.compat.IS_PYTHON_3 else astr
-
-
 OrderedDict = anyconfig.compat.OrderedDict
-CNF_0 = dict(((_bytes("DEFAULT"),
-               dict(((_bytes("a"), _bytes("0")),
-                     (_bytes("b"), _bytes("bbb")),
-                     (_bytes("c"), _bytes("5"))))),
-              (_bytes("sect0"),
-               dict(((_bytes("a"), _bytes("0")),
-                     (_bytes("b"), _bytes("bbb")),
-                     (_bytes("c"), _bytes("5")),
-                     (_bytes("d"), _bytes("x,y,z")))))))
+CNF_0 = dict(((u"DEFAULT",
+               dict(((u"a", u"0"),
+                     (u"b", u"bbb"),
+                     (u"c", u"5")))),
+              (u"sect0",
+               dict(((u"a", u"0"),
+                     (u"b", u"bbb"),
+                     (u"c", u"5"),
+                     (u"d", u"x,y,z"))))))
 CNF_1 = copy.deepcopy(CNF_0)
-CNF_1[_bytes("sect0")][_bytes("d")] = _bytes("x,y,z").split()
+CNF_1[u"sect0"][u"d"] = u"x,y,z".split()
 
-CNF_2 = dict(((_bytes("a"), 0.1),
-              (_bytes("b"), _bytes("bbb")),
-              (_bytes("sect0"),
-               dict(((_bytes("c"), [_bytes("x"), _bytes("y"),
-                                    _bytes("z")]), )))))
+CNF_2 = dict(((u"a", 0.1),
+              (u"b", u"bbb"),
+              (u"sect0",
+               dict(((u"c", [u"x", u"y", u"z"]), )))))
 
 
 def selfdir():
