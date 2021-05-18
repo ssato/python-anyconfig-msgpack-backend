@@ -5,8 +5,6 @@
 # License: MIT
 #
 # pylint: disable=missing-docstring,invalid-name,too-few-public-methods
-from __future__ import absolute_import
-
 import msgpack
 
 # import copy

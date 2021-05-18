@@ -6,9 +6,9 @@ python-anyconfig-msgpack-backend
    :target: https://pypi.python.org/pypi/anyconfig-msgpack-backend/
    :alt: [Latest Version]
 
-.. image:: https://img.shields.io/travis/ssato/python-anyconfig-msgpack-backend.svg
-   :target: https://travis-ci.org/ssato/python-anyconfig-msgpack-backend
-   :alt: Test status
+.. image:: https://github.com/ssato/python-anyconfig-msgpack-backend/workflows/Tests/badge.svg
+   :target: https://github.com/ssato/python-anyconfig-msgpack-backend/actions?query=workflow%3ATests
+   :alt: [Github Actions: Test status]
 
 .. image:: https://img.shields.io/coveralls/ssato/python-anyconfig-msgpack-backend.svg
    :target: https://coveralls.io/r/ssato/python-anyconfig-msgpack-backend
