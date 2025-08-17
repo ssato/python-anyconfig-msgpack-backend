@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 - 2019 Satoru SATOH <satoru.satoh@gmail.com>
+# Copyright (C) 2015 - 2015 Satoru SATOH <satoru.satoh gmail.com>
 # License: MIT
 #
 # Ref. python -c "import msgpack; help(msgpack.Unpacker); help(msgpack.Packer)"
@@ -34,24 +34,23 @@ class Parser(anyconfig.backend.base.StringStreamFnParser,
     """
     Loader/Dumper for MessagePack files.
     """
-    _type: [str] = 'msgpack'
-    _extensions: typing.List[str] = []
-    _load_opts: typing.List[str] = [
+    _type = 'msgpack'
+    _load_opts = (
         'read_size', 'use_list', 'object_hook', 'list_hook',
         'encoding', 'unicode_errors', 'max_buffer_size', 'ext_hook',
         'max_str_len', 'max_bin_len', 'max_array_len', 'max_map_len',
-        'max_ext_len', 'object_pairs_hook'
-    ]
-    _dump_opts: typing.List[str] = [
+        'max_ext_len', 'object_pairs_hook',
+    )
+    _dump_opts = (
         'default', 'encoding', 'unicode_errors', 'use_single_float',
-        'autoreset', 'use_bin_type'
-    ]
+        'autoreset', 'use_bin_type',
+    )
     # Exclusive with object_hook
-    _dict_opts: typing.List[str] = ['object_pairs_hook']
+    _dict_opts = (
+        'object_pairs_hook',
+    )
 
     _load_from_string_fn = anyconfig.backend.base.to_method(msgpack.unpackb)
     _load_from_stream_fn = anyconfig.backend.base.to_method(msgpack.unpack)
     _dump_to_string_fn = anyconfig.backend.base.to_method(msgpack.packb)
     _dump_to_stream_fn = anyconfig.backend.base.to_method(msgpack.pack)
-
-# vim:sw=4:ts=4:et:
