@@ -11,18 +11,16 @@ jobs:
   - job: Build
     strategy:
       matrix:
-        python37:
-          pythonVersion: 3.7
-        python38:
-          pythonVersion: 3.8
         python39:
           pythonVersion: 3.9
-        python38-anyconfig:
-          pythonVersion: 3.8
-          subVer: -anyconfig
-        python38-json5:
-          pythonVersion: 3.8
-          subVer: -json5
+        python310:
+          pythonVersion: 3.10
+        python311:
+          pythonVersion: 3.11
+        python312:
+          pythonVersion: 3.12          
+        python313:
+          pythonVersion: 3.13
 
     pool:
       vmImage: 'ubuntu-latest'
