@@ -1,0 +1,54 @@
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+# https://wheel.readthedocs.io/en/stable/
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anyconfig-msgpack-backend"
+dynamic = [
+    "version",
+]
+requires-python = ">= 3.9"
+dependencies = [
+    "anyconfig",
+    "msgpack",
+    "setuptools",
+]
+description = "Backend module for python-anyconfig to load and dump MessagePack data"
+readme = "README.rst"
+authors = [
+    {"name" = "Satoru SATOH", email = "satoru.satoh@gmail.com"},
+]
+maintainers = [
+    {"name" = "Satoru SATOH", email = "satoru.satoh@gmail.com"},
+]
+license = "MIT"
+license-files = [
+    "LICENSE.MIT", "AUTHORS.txt"
+]
+keywords = [
+    "anyconfig",
+    "msgpack",
+]
+classifiers = [
+   "Development Status :: 4 - Beta",
+   "Intended Audience :: Developers",
+   "Programming Language :: Python",
+   "Programming Language :: Python :: 3",
+   "Programming Language :: Python :: 3.9",
+   "Programming Language :: Python :: 3.10",
+   "Programming Language :: Python :: 3.11",
+   "Programming Language :: Python :: 3.12",
+   "Programming Language :: Python :: 3.13",
+   "Operating System :: OS Independent",
+   "Topic :: Software Development :: Libraries :: Python Modules",
+   "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/ssato/python-anyconfig-msgpack-backend"
+Issues = "https://github.com/ssato/python-anyconfig-msgpack-backend/issues"
+
+[project.entry-points."anyconfig_backends"]
+msgpack = "anyconfig_msgpack_backend:Parser"
