@@ -2,21 +2,34 @@
 python-anyconfig-msgpack-backend
 ==================================
 
-.. .. image:: https://img.shields.io/pypi/v/anyconfig-msgpack-backend.svg
+.. image:: https://img.shields.io/pypi/v/anyconfig-msgpack-backend.svg
    :target: https://pypi.python.org/pypi/anyconfig-msgpack-backend/
    :alt: [Latest Version]
+
+.. image:: https://img.shields.io/pypi/pyversions/anyconfig.svg
+   :target: https://pypi.python.org/pypi/anyconfig/
+   :alt: [Python versions]
+
+.. image:: https://img.shields.io/pypi/l/anyconfig.svg
+   :target: https://pypi.python.org/pypi/anyconfig/
+   :alt: MIT License
 
 .. image:: https://github.com/ssato/python-anyconfig-msgpack-backend/workflows/Tests/badge.svg
    :target: https://github.com/ssato/python-anyconfig-msgpack-backend/actions?query=workflow%3ATests
    :alt: [Github Actions: Test status]
 
+
+.. image:: https://dev.azure.com/satorusatoh0471/python-anyconfig-msgpack-backend/_apis/build/status%2Fssato.python-anyconfig-msgpack-backend?branchName=next
+   :target: https://dev.azure.com/satorusatoh0471/python-anyconfig-msgpack-backend/_build/latest?definitionId=1
+   :alt: [Azure Pipelines Status]
+
 .. image:: https://img.shields.io/coveralls/ssato/python-anyconfig-msgpack-backend.svg
    :target: https://coveralls.io/r/ssato/python-anyconfig-msgpack-backend
    :alt: Coverage Status
 
-.. image:: https://landscape.io/github/ssato/python-anyconfig-msgpack-backend/master/landscape.png
-   :target: https://landscape.io/github/ssato/python-anyconfig-msgpack-backend/master
-   :alt: Code Health
+.. image:: https://scrutinizer-ci.com/g/ssato/python-anyconfig-msgpack-backend/badges/quality-score.png?b=next
+   :target: https://scrutinizer-ci.com/g/ssato/python-anyconfig-msgpack-backend
+   :alt: [Code Quality by Scrutinizer]
 
 This is a backend module for python-anyconfig to support to load and dump
 MessagePack data files.
