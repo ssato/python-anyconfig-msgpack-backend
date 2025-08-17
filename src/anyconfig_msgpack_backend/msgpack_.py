@@ -21,8 +21,6 @@ Changelog:
 
     .. versionadded:: 0.0.11
 """
-import typing
-
 import msgpack
 
 import anyconfig.backend.base
